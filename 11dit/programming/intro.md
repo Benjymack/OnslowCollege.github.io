@@ -1,68 +1,57 @@
 ---
-title: (Re)Intro to Python
+title: Intro to Swift
 learning_intentions: ["To assign and use data stored in variables", "Printing text and getting user input", "Converting strings to numbers and back"]
 success_criteria: ["You have created the 'Hello, student!' program, tested it, and shown your teacher that it works", "You have created the basic wall calculator program"]
 ---
 
-If you took 10DIT at Onslow College last year, then welcome back! It's time to get our minds back into programming. Hopefully you haven't forgotten all your Python — if you have, don't worry, it's just like riding a bike! (and if you haven't been on a bike before, don't worry, it'll all come back just the same!)
+# Task 1 Hello, student!
 
-# Task 2.1 Hello, student!
+> **Filename**: hello.swift
 
-> **Filename**: hello.py
+## 1.1 Requirements
 
-## 2.1.1 Requirements
-
-In this task, you will be asked to make a **very** simple program. Using Python, you will:
+In this task, you will be asked to make a **very** simple program. Using Swift, you will:
 -   Ask the user for their name.
 -   Greet the user by their name.
 
-## 2.1.2 First steps
+## 1.2 First steps
 
 In order to create the program:
 - Open Visual Studio Code
-- Click Open Folder and select the 11DIT Python folder in your OneDrive
+- Click Open Folder and select the 11DIT Swift folder in your OneDrive
 - At the top of the Explorer pane (top-left), click the New File button
-- Create a new file called **Hello.py**
+- Create a new file called **Hello.swift**
 - Write your code on the right
-- Run your code by clicking the Run Python File at the top-right
+- Run your code by clicking the Run Swift File at the top-right
 
-## 2.1.3 CodeAvengers
-
-Never touched Python before? Need a refresher? Check out these lessons on CodeAvengers:
-
-- [Strings and print statements](https://learn.codeavengers.com/python/11#1.1)
-  - Do parts 1, 2, 3, 4, and 5
-- [Joining things in print statements](https://learn.codeavengers.com/python/11#3.1)
-  - Do parts 1 and 2
-
-## 2.1.4 Statements to use
+## 1.3 Statements to use
 
 - ``print()``
   - This function will 'print' the text that is contained within the brackets and quotation marks to the screen
-  - ```python
+  - ```swift
     print("Hello, world!")
     ```
-- ``input()``
+- ``readLine()!``
   - This function will 'print' the text that is contained within the brackets and quotation marks to the screen
   - The user then types something, presses Enter/Return, and whatever they entered is stored in a variable
-  - ```python
-    age = input("How old are you?")
+  - ```swift
+    let age = readLine("How old are you?")!
     ```
 
-## 2.1.5 Example output
+## 1.4 Example output
 
 ```
 Please type your name: Bob
 Hello, Bob!
 ```
 
-# Task 2.2: Wall paint calculator
+# Task 2 Wall paint calculator
 
-> **Filename**: paint1.py
+> **Filename**: paint1.swift
 
-## 2.2.1 Requirements
+## 2.1 Requirements
 
-In this task, you will do some simple maths to calculate how many litres of paint will be required to coat a wall. Using Python, you will:
+In this task, you will do some simple maths to calculate how many litres of paint will be required to coat a wall. Using Swift, you will:
 
 -   Ask the user for the width in metres of the wall
 -   Ask the user for the height in metres of the wall
@@ -71,46 +60,40 @@ In this task, you will do some simple maths to calculate how many litres of pain
 For every square metre, the user will need 2 L of paint.
 
 (Yes, this is excessive, but it's an exercise, go with it)
-
-## 2.2.2 CodeAvengers
-
-If you're unsure how to handle numbers in code, try these CodeAvengers activities:
-
-- [Math calculations and operators](https://learn.codeavengers.com/python/11#2.1)
-  - Do parts 1, 2, 3, 4, and 5
-## 2.2.3 Statements to use
+## 2.2 Statements to use
 
 This task will involve casting. This means you will convert a variable from a string to an integer. To do this, make use of the ``int()`` function:
 
-- ``int()``
+- ``Int()!``
   - This function converts strings representing a valid integer to a number type. You should store this in a variable
-  - ```python
-    age = int("14")
+  - ```swift
+    var age = Int("14")!
     ```
   - ```python
-    age = int(input("How old are you?"))
+    print("How old are you?")
+    var age = Int(readLine())
     ```
 - Math operations
   - ``+`` to add two numbers together
   - ``-`` to subtract the right-hand side from the left-hand side
   - ``*`` to multiply two numbers together
   - ``/`` to divide the left-hand side by the right-hand side
-  - ```python
-    age_in_10_years = age + 10
-    age_last_year = age - 1
-    double_age = age * 2
-    age_squared = age * age
-    half_age = age / 2
+  - ```swift
+    let ageIn10Years = age + 10
+    let ageLastYear = age - 1
+    let doubleAge = age * 2
+    let ageSquared = age * age
+    let halfAge = age / 2
     ```
 
-## 2.2.4 Hint
+## 2.3 Hint
 
 If maths isn't your strong point, don't worry. The formula for determining how much paint is needed for the wall is simple:
 ```
 width * height * paint_per_litre
 ```
 
-## 2.2.5 Example output
+## 2.4 Example output
 
 ```
 Please type the wall width in metres: 4
